@@ -1,11 +1,11 @@
 #!/bin/sh
 
-git clone https://github.com/linux-surface/linux-surface
+#git clone https://github.com/linux-surface/linux-surface
 
-sudo dnf config-manager --add-repo=https://pkg.surfacelinux.com/fedora/linux-surface.repo
-sudo dnf install --allowerasing kernel-surface iptsd libwacom-surface
+sudo dnf -y config-manager --add-repo=https://pkg.surfacelinux.com/fedora/linux-surface.repo
+sudo dnf -y install --allowerasing kernel-surface iptsd libwacom-surface
 sudo systemctl enable iptsd
-sudo dnf install surface-secureboot
+sudo dnf -y install surface-secureboot
 
 echo """
 [Unit]
