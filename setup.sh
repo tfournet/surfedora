@@ -24,7 +24,7 @@ Description=Fedora default kernel updater
 
 [Service]
 Type=oneshot
-ExecStart=/bin/sh -c "grubby --set-default /boot/vmlinuz*surface*"
+ExecStart=/bin/sh -c \"grubby --set-default /boot/vmlinuz*surface*\"
 """ > /etc/systemd/system/default-kernel.service
 
 sudo grubby --set-default /boot/vmlinuz*surface*
